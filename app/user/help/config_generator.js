@@ -37,9 +37,11 @@ app.controller('ConfigGeneratorCtrl', function($scope) {
 		if (attr['with_custom_port'] == '9000' || attr['with_custom_port'] == '443') {
 			conf['tls'] = 'true';
 			conf['tls-yn'] = 'Yes';
+			conf['stratum'] = 'stratum+ssl://';
 		} else {
 			conf['tls'] = 'false';
 			conf['tls-yn'] = 'No';
+			conf['stratum'] = 'stratum+tcp://';
 		}
 
 		if (attr['with_worker_id']) {
