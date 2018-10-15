@@ -60,14 +60,14 @@
 
 				<h3>Example configuration for <a href="https://github.com/fireice-uk/xmr-stak/releases" target="_blank">XMR-Stak</a> and <a href="https://github.com/Dead2/CryptoGoblin/releases" target="_new" style="text-decoration: underline;">CryptoGoblin</a>:</h3>
 				<div class="md-body-1 code-snippet" layout='row' flex>
-					<p>Start the client without any config files, and enter the following when asked:</p>
+					Start the client without any config files, and enter the following when asked:<br/>
 					<code class='code-snippet'>
-						Currency: monero7</br>
-						Pool address: "{{ example_config['pool_address'] }}",</br>
-						Username: "{{ example_config['username'] }}",</br>
-						Password: "{{ example_config['password'] }}",</br>
-						Rid ID: "{{ example_config['rigid'] }}",</br>
-						TLS/SSL: "{{ example_config['tls-yn'] }}",</br>
+						Currency: monero</br>
+						Pool address: {{ example_config['pool_address'] }}</br>
+						Username: {{ example_config['username'] }}</br>
+						Password: {{ example_config['password'] }}</br>
+						Rig ID: {{ example_config['rigid'] }}</br>
+						TLS/SSL: {{ example_config['tls-yn'] }}</br>
 						Nicehash: No</br>
 					</code>
 				</div>
@@ -84,10 +84,10 @@
 				<h3>Example configuration for <a href="https://bitcointalk.org/index.php?topic=638915.0" target="_blank">Claymore's CryptoNote GPU Miner</a>:</h3>
 				<div class="md-body-1 code-snippet" layout='row' flex>
 					<code class='code-snippet'>
-						-o stratum+tcp://{{ example_config['pool_address'] }}</br>
+						-o {{ example_config['stratum'] }}{{ example_config['pool_address'] }}</br>
 						-u {{ example_config['username'] }}</br>
 						-p {{ example_config['password'] }}</br>
-					</code></br></br>*For SSL use stratum+ssl://
+					</code>
 				</div> 
 			<br>
 			</md-card-content>
